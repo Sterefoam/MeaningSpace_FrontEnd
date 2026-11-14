@@ -1,0 +1,13 @@
+# File kerja lokal dan hasil pengujian
+.taste-skill/
+.playwright-mcp/
+.agents/
+.codex/
+
+# Dependensi, konfigurasi rahasia, dan file sistem
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
