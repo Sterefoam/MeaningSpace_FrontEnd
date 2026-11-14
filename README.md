@@ -1,52 +1,32 @@
 # MeaningSpace
 
-Website edukasi psikologi kerja yang membantu pekerja mengenali diri, menemukan makna dalam pekerjaan, dan menjaga kesejahteraan mental.
+Website edukasi psikologi kerja untuk membantu pengunjung mengenali diri, menemukan makna dalam pekerjaan, dan menjaga kesejahteraan mental.
 
 ## Menjalankan
 
-Buka `index.html` langsung di browser, tanpa instalasi atau proses build.
+Buka `index.html` langsung di browser. Tidak perlu instalasi atau proses build.
 
-Untuk pratinjau melalui HTTP, jalankan:
+## Fitur yang tersedia
 
-```sh
-node server.cjs
-```
-
-Lalu buka http://127.0.0.1:4173. Server ini hanya menyajikan file statis.
-
-## Fitur
-
-- Check-in suasana hati dan pelacakan energi harian.
-- Refleksi kelelahan, nilai kerja, dan kompas makna pekerjaan.
-- Evaluasi keseimbangan kerja dan kehidupan.
-- Obrolan Meja Kerja dengan catatan refleksi pribadi.
-- Ruang Cerita dengan pencarian, kategori, reaksi, dan komentar.
-- Simulasi pengajuan konsultasi dan tiket konfirmasi.
-- Rencana aksi mingguan dengan checklist dan progress.
-- Artikel edukasi psikologi kerja.
-
-## Teknologi dan tampilan
-
-HTML, CSS, Tailwind CSS via CDN, dan JavaScript tanpa framework. Tampilan responsif menggunakan DM Sans, Nunito Sans, warna sage, dan animasi ringan yang mendukung pengaturan reduced motion.
+- Halaman utama responsif dengan ilustrasi SVG lokal.
+- Check-in perasaan dengan tanggapan singkat sesuai pilihan.
+- Tautan Kompas Makna dan Ruang Jeda menuju bacaan terkait.
+- Tiga bacaan edukatif yang dapat dibuka dan ditutup.
+- Navigasi keyboard, pengumuman tanggapan check-in untuk pembaca layar, dan dukungan reduced motion.
 
 ## Deployment
 
-Unggah file berikut ke hosting statis seperti GitHub Pages, Netlify, atau Vercel:
+`netlify.toml` menetapkan direktori utama sebagai direktori publikasi. Tidak diperlukan perintah build. Pastikan file berikut ikut diterbitkan:
 
 - `index.html`
 - `styles.css`
-- `refresh.css`
 - `app.js`
-- Folder `assets/`
+- `assets/mark.svg`
 
-Tidak perlu menjalankan `server.cjs` di hosting statis. Google Fonts dan Tailwind CDN membutuhkan internet; CSS utama tersedia lokal dan font memiliki fallback.
+Font Google Fonts bersifat opsional; font serif dan sans-serif cadangan tersedia jika layanan tersebut tidak dapat diakses. Ilustrasi, gaya utama, dan interaksi tidak memerlukan layanan eksternal.
 
 ## Data dan batasan
 
-Data pengguna disimpan di `localStorage` browser dengan key `meaningspace-v1`. Tidak ada backend, database eksternal, atau sinkronisasi antarpengguna. Tombol **Reset Data Demo** mengembalikan data awal setelah konfirmasi.
+Pilihan check-in hanya berlaku selama halaman terbuka dan tidak disimpan atau dikirim ke server. Halaman ini belum menyediakan akun, penyimpanan jurnal, ruang cerita, atau pemesanan konsultasi.
 
-Cerita, reaksi awal, artikel, dan pilihan layanan merupakan konten demo. Pengajuan sesi adalah simulasi dan tidak menghubungi profesional. Hasil refleksi bukan instrumen klinis tervalidasi atau diagnosis. Data lokal dapat diakses orang yang menggunakan profil browser yang sama.
-
-## Kredit foto
-
-Foto ilustrasi percakapan: [Christina @ wocintechchat.com / Unsplash](https://unsplash.com/@wocintechchat), digunakan berdasarkan [Lisensi Unsplash](https://unsplash.com/license). Kredit juga ditampilkan di footer website.
+Materi bersifat edukatif dan bukan instrumen klinis, diagnosis, atau pengganti bantuan profesional.
